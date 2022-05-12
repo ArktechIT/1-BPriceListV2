@@ -103,7 +103,7 @@
 	//~ $sqlFilter .= " AND partId IN (SELECT arkPartId FROM sales_parts)";
 	
 	$sql = "SELECT partId FROM cadcam_parts ".$sqlFilter;
-	$queryParts = $db->query($sql);
+	$queryParts = $db->query($sql);//Comment something
 	$totalRecords = ($queryParts AND $queryParts->num_rows > 0) ? $queryParts->num_rows : 0;
 	
 	//~ echo createFilterInput($sqlFilter,'materialType',$materialType)	
